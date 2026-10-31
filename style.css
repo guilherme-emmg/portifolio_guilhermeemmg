@@ -1,0 +1,68 @@
+/* =========================================================================
+   ESTILOS GERAIS — PORTFÓLIO GUILHERME EMANUEL
+   Estrutura 100% estática e independente de Node / npm
+   ========================================================================= */
+
+:root {
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+  font-family: var(--font-sans);
+  color: #0f172a;
+  background-color: #fafafb;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display);
+  text-wrap: balance;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Acessibilidade — Respeito à preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Transições suaves para microinterações */
+.btn-transition {
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Efeito de foco visual acessível */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
